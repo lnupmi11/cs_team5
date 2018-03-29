@@ -13,7 +13,7 @@ namespace Shop.Data.Models
 
         public string ShortDescription { get; set; }
 
-        public string LongDecription { get; set; }
+        public string LongDescription { get; set; }
 
         public decimal Price { get; set; }
 
@@ -23,7 +23,7 @@ namespace Shop.Data.Models
 
         public bool IsPreferedAstronomicalObject { get; set; }
 
-        public int InStock { get; set; }
+        public bool InStock { get; set; }
 
         public int CategoryId { get; set; }
 

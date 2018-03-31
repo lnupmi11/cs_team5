@@ -7,7 +7,7 @@ using Shop.Data.Models;
 
 namespace Shop.Data.Interfaces
 {
-    interface IAstronomicalObjectRepository
+    public interface IAstronomicalObjectRepository
     {
         IEnumerable<AstronomicalObject> AstronomicalObjects { get; }
 

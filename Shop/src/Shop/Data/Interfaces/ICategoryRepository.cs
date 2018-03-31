@@ -7,7 +7,7 @@ using Shop.Data.Models;
 
 namespace Shop.Data.Interfaces
 {
-    interface ICategoryRepository
+    public interface ICategoryRepository
     {
         IEnumerable<Category> Categories { get; }
     }

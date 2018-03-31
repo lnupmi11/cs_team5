@@ -9,9 +9,9 @@ namespace Shop.Data.Interfaces
 {
     interface IAstronomicalObjectRepository
     {
-        IEnumerable<AstronomicalObject> AstronomicalObjects { get; set; }
+        IEnumerable<AstronomicalObject> AstronomicalObjects { get; }
 
-        IEnumerable<AstronomicalObject> PreferredAstronomicalObjects { get; set; }
+        IEnumerable<AstronomicalObject> PreferredAstronomicalObjects { get; }
 
         AstronomicalObject GetAstronomicalObjectById(int AOId);
     }

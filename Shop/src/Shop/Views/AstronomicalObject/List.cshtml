@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Shop.Data.Models
+
+@model IEnumerable<AstronomicalObject> 
+<div>
+    <h1> Our astronomical objects </h1>
+</div>
+
+@{ 
+    foreach(var astronomicalObject in Model)
+    {
+        <div>
+            <h2 style="color:blue">Astronomical Object </h2> 
+            <p>Name : @astronomicalObject.Name</p>
+            <p>Price : @astronomicalObject.Price.ToString("")</p>
+            <p>Description: @astronomicalObject.ShortDescription</p>
+        </div>
+
+    }
+}

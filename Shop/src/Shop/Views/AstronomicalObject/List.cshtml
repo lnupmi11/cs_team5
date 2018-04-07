@@ -7,12 +7,17 @@
 @{
     foreach (var astronomicalObject in Model)
     {
-        <div>
-            <h2 style="color:blue">Astronomical Object </h2>
-            <p>Name : @astronomicalObject.Name</p>
-            <p>Price : @astronomicalObject.Price.ToString("")</p>
-            <p>Description: @astronomicalObject.ShortDescription</p>
+        <div class="card col-sm-4 col-lg-4 col-md-4">
+            <div class="img-thumbnail">
+                <img class="card-img-top" src="@astronomicalObject.ImageThumbnailUrl" alt=""/>
+                <div class="card-block">
+                    <h2 class="card-title">@astronomicalObject.Name </h2>
+                    <p>Price : @astronomicalObject.Price.ToString("")</p>
+                    <p>Description: @astronomicalObject.ShortDescription</p>
+                </div>
+            </div>
         </div>
 
     }
 }
+

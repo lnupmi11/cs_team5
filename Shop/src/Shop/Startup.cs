@@ -10,6 +10,9 @@ using Microsoft.Extensions.Logging;
 using Shop.Data.Interfaces;
 using Shop.Data.Models;
 using Shop.Data.Mocks;
+using Microsoft.Extensions.Configuration;
+using Shop.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Shop
 {
@@ -17,8 +20,22 @@ namespace Shop
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
+
+        private IConfigurationRoot _configurationRoot;
+        public Startup(IHostingEnvironment hostingEnvironment)
+        {
+            _configurationRoot = new ConfigurationBuilder()
+                .SetBasePath(hostingEnvironment.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .Build();
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            //Server configuration
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
+
             services.AddTransient<IAstronomicalObjectRepository, MockAstronomicalObjectRepository>();
             services.AddTransient<ICategoryRepository, MockCategoryRepository>();
             services.AddMvc();

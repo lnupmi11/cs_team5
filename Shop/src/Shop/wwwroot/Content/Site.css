@@ -1,69 +1,110 @@
 ﻿body{
-    background-color:mediumpurple;
+    background-color:darkslategrey;
+    background: linear-gradient(to bottom right,darkslategrey, black, darkslategrey, black);
     text-align:center;
-   
-}
-#cartButton {
-    margin-right: 8px;
-}
-
-nav {
-    padding: 8px;
+    font-family: 'Cinzel Decorative';
+    height: 100%;
+    margin: 0px;
+    text-shadow: 2px 2px 5px darkslategrey;
 }
 
-.loginForm {
-    margin: 10%;
+footer {
+	height: 200px;
+	background-color: black;
+	text-align: center;
+	padding: 10px 0px;
+    color:white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-.checkoutForm {
-    margin-top: 5%;
+header {
+    
+	height:30%;
+    margin-top:0px;
+    padding-top:0px;
+    text-shadow: 2px 2px 5px black;
 }
 
-.orderForm {
-    margin-top: 5%;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: #2fa4e7;
-}
 
-a.remove {
-    text-decoration: none;
-}
-
-    a.remove:hover {
-        color: blue;
-    }
-
-.center_div {
-    margin: 0 auto;
-    width: 80% /* value of your choice which suits your alignment */
-}
-
-.marginTop {
-    margin-top: 5%;
-}
-
-.marginTop1 {
-    margin-top: 2%;
-}
-
-.formPullRightButton {
-    margin-right: 10px !important
-}
-
-.carousel img {
-    min-width: 100%;
-}
 .card{
-    margin-bottom:20px;
     margin-left:30%;
+    margin-right:30%;
     text-align:center;
-    background-color:darkgrey;
+    background-color:#d4d4d4;
 }
 .card-title{
     text-decoration:wavy;
     font-size:20px;
 }
 .card-block {
-    background-color: darkgrey;
+    background-color:#cacaca;
+}
+.card-img{
+    margin-top:3%;
+    width:90%;
+    height:auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    object-fit:cover;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 10px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 30%;
+  text-shadow: 2px 2px 5px black;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.container {
+    overflow: hidden;
+    background-color:#313131;
+    
+}
+
+.container a {
+    float: left;
+    display: block;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    height:30px;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
 }

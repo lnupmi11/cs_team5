@@ -21,7 +21,7 @@ namespace Shop.Data.Models
 
         public string ImageThumbnailUrl { get; set; }
 
-        public bool IsPreferedAstronomicalObject { get; set; }
+        public bool IsPreferredAstronomicalObject { get; set; }
 
         public bool InStock { get; set; }
 

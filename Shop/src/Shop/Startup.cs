@@ -7,6 +7,7 @@ using Shop.Data.Mocks;
 using Microsoft.Extensions.Configuration;
 using Shop.Data;
 using Microsoft.EntityFrameworkCore;
+using Shop.Data.Repositories;
 
 namespace Shop
 {
@@ -30,8 +31,8 @@ namespace Shop
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<IAstronomicalObjectRepository, MockAstronomicalObjectRepository>();
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            services.AddTransient<IAstronomicalObjectRepository, AstronomicalObjectRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddMvc();
         }
 

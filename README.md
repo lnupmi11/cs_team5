@@ -1,11 +1,12 @@
-# cs_team5
+# Asteroid Shop
 
 ## Description
 
-This will be the source code of the web application, which will provide a flexible and easy searching, ordering and purchasing of the desired goods or services. 
+This will be the source code of the web application, which will provide a flexible and easy searching, ordering and purchasing of the desired goods(why not asteroids) or services. 
 In the service, you can create an account, view and sort goods with the required characteristics.
 
 ## Technologies
 
 * C#
-* .NET Framework
+* .NET Framework 4.6.2
+* ASP.NET Core 1.0.1

@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Shop.Data;
 using Microsoft.EntityFrameworkCore;
 using Shop.Data.Repositories;
+using Shop.Data.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Shop
 {
@@ -33,7 +35,13 @@ namespace Shop
 
             services.AddTransient<IAstronomicalObjectRepository, AstronomicalObjectRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+
             services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +51,7 @@ namespace Shop
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
 
             DbInitializer.Seed(app);

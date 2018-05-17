@@ -12,5 +12,7 @@ namespace Shop.Data
         public DbSet<AstronomicalObject> AstronomicalObjects { get; set; }
 
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

@@ -1,0 +1,13 @@
+@model HomeViewModel
+
+@* @await Html.PartialAsync("Carousel") *@
+
+<h2 style="color:aliceblue;">Clients preferences - just for you!</h2>
+
+
+<div class="row">
+    @foreach (var obj in Model.PreferredAstronomicalObjects)
+    {
+        @Html.Partial("AstronomicalObjectsSummary", obj)
+    }
+</div>

@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Shop.Data.Repositories;
 using Shop.Data.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Shop
 {
@@ -33,6 +34,10 @@ namespace Shop
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
 
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
+            
             services.AddTransient<IAstronomicalObjectRepository, AstronomicalObjectRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
 
@@ -52,10 +57,10 @@ namespace Shop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
+            app.UseIdentity();
             // app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
             {
-                routes.MapRoute(name: "categoryfilter", template: "AstronomicalObject/{action}/{category?}", defaults:new { Controller = "AstronomicalObject", action = "List" });
                 routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
             });
             

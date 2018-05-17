@@ -35,7 +35,8 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              @await Component.InvokeAsync("ShoppingCartSummary")     
+                @await Component.InvokeAsync("ShoppingCartSummary") 
+                @await Html.PartialAsync("LoginPartial")
             </ul>
         </div>
     </div>

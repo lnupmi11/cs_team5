@@ -9,4 +9,14 @@
             <p>@Model.ShortDescription</p>
         </div>
     </div>
+    <div class="addToCart text-right">
+        <p class="button ">
+            <a class="btn btn-success" id="cartButton" 
+               asp-controller="ShoppingCart" 
+               asp-action="AddToShoppingCart" 
+               asp-route-AstronomicalObjectId="@Model.AstronomicalObjectId">
+                Add to cart
+            </a>
+        </p>
+    </div>
 </div>

@@ -11,13 +11,13 @@ namespace DrinkAndGo.Data.Models
         
         public int OrderId { get; set; }
         
-        public int DrinkId { get; set; }
+        public int AstronomicalObjectId { get; set; }
         
         public int Amount { get; set; }
         
         public decimal Price { get; set; }
         
-        public virtual Drink Drink { get; set; }
+        public virtual AstronomicalObject AstronomicalObject { get; set; }
         
         public virtual Order Order { get; set; }
     }

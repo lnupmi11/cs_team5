@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DrinkAndGo.Data.Models
+namespace Shop.Data.Models
 {
     public class OrderDetail
     {

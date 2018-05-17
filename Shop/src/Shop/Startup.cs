@@ -55,6 +55,7 @@ namespace Shop
             // app.UseMvcWithDefaultRoute();
             app.UseMvc(routes =>
             {
+                routes.MapRoute(name: "categoryfilter", template: "AstronomicalObject/{action}/{category?}", defaults:new { Controller = "AstronomicalObject", action = "List" });
                 routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
             });
             
